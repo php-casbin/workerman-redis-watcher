@@ -1,0 +1,12 @@
+/vendor/
+
+composer.lock
+
+.idea/
+*.iml
+*.cache
+
+# coverage report
+/build
+
+./phpunit.xml
