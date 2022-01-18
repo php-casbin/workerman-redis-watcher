@@ -40,6 +40,8 @@ $worker->onWorkerStart = function () {
     // Initialize the Enforcer.
     $enforcer = new Enforcer("path/to/model.conf", "path/to/policy.csv");
 
+    $enforcer->setWatcher($watcher);
+    
     // Set callback, sets the callback function that the watcher will call,
     // When the policy in DB has been changed by other instances.
     // A classic callback is $enforcer->loadPolicy().
@@ -47,9 +49,6 @@ $worker->onWorkerStart = function () {
         echo "Now should reload all policies." . PHP_EOL;
         $enforcer->loadPolicy();
     });
-
-    $enforcer->setWatcher($watcher);
-
 };
 
 Worker::runAll();
