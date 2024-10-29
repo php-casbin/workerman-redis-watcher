@@ -17,8 +17,9 @@
     ],
     "license": "Apache-2.0",
     "require": {
-        "casbin/casbin": "^3.0",
-        "workerman/redis": "^1.0"
+        "php": ">=8.0",
+        "casbin/casbin": "^4.0",
+        "workerman/redis": "^2.0"
     },
     "autoload": {
         "psr-4": {
